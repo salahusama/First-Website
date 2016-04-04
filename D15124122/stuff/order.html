@@ -1,0 +1,185 @@
+<html>
+
+<head>
+	<script>
+	function validateForm() {
+    	var x = document.forms["myForm"]["firstname"].value;
+    	var y = document.forms["myForm"]["time"].value;
+    	if (x == null || x == "") {
+    		return false;
+    	}
+    	if (y == null || y == "") {
+    		alert("You need to enter time of arrival!");
+    		return false;
+    	}
+    	else {
+    		alert("Your order has been taken!\nClick Ok to continue to where to find us.");
+    	}
+	}
+</script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	#center {
+   		height: 930px;
+	}
+	</style>
+</head>
+
+<body>
+	<header id="top"></header>
+
+	<nav>
+		<ul>
+			<li><a href="../homepage.html">Home</a></li>
+			<li><a href="card.html">Loyalty Card</a></li>
+			<li><a href="order.html">Order Now</a></li>
+			<li><a href="map.html">Find Us</a></li>
+		</ul>
+	</nav>
+
+	<section id="center">
+	<div>
+	<form name="myForm" onsubmit="return validateForm()" action="map.html">
+	<fieldset>
+	<legend>Menu</legend>
+		<table width="100%" cellpadding="5px">
+			<tr>
+				<td><dl>
+				<dt>Cappuccino</dt>
+				<dd><sub>Espresso with steamed, frothy milk and chocolate dusting</sub></dd>
+				</dl></td>
+				<td>&#8364; 4.00</td>
+				<td><input type="checkbox" name="item" value="cappuccino"></td>
+				</td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Caffe Late</dt>
+				<dd><sub>It's simply made with espresso and fresh steamed milk</sub></dd>
+				</dl></td>
+				<td>&#8364; 3.40</td>
+				<td><input type="checkbox" name="item" value="late"></td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Americano</dt>
+				<dd><sub>A smooth coffee that mixes shots of espresso with hot water</sub></dd>
+				</dl></td>
+				<td>&#8364; 3.40</td>
+				<td><input type="checkbox" name="item" value="americano"></td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Expresso</dt>
+				<dd><sub>Small in stature but intense in taste</sub></dd>
+				</dl></td>
+				<td>&#8364; 3.00</td>
+				<td><input type="checkbox" name="item" value="expresso"></td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Hot Chocolate</dt>
+				<dd><sub>Rich milky Hot Chocolate with cappiccino dusting</sub></dd>
+				</dl></td>	
+				<td>&#8364; 3.70</td>
+				<td><input type="checkbox" name="item" value="chocolate"></td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Mocha Latte</dt>
+				<dd><sub>Our rich Hot Chocolate with an added shot of espresso</sub></dd>
+				</dl></td>
+				<td>&#8364; 4.00</td>
+				<td><input type="checkbox" name="item" value="mocha"></td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Chai Latte</dt>
+				<dd><sub>Extract of black tea with aromatic spices</sub></dd>
+				</dl></td>
+				<td>&#8364; 4.00</td>
+				<td><input type="checkbox" name="item" value="chai"></td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Chamomile Tea</dt>
+				<dd><sub>A comforting blend of chamomile, rose petals and soothing herbs</sub></dd>
+				</dl></td>
+				<td>&#8364; 3.40</td>
+				<td><input type="checkbox" name="item" value="tea"></td>
+			</tr>
+
+			<tr>
+				<td><dl>
+				<dt>Chai Frappuccino</dt>
+				<dd><sub>A creamy blend of spicy chai, milk and ice topped with sweetened whipped cream</sub></dd>
+				</dl></td>
+				<td>&#8364; 8.00</td>
+				<td><input type="checkbox" name="item" value="frappuccino"></td>
+			</tr>
+		</table>
+	</fieldset>
+	</br>
+	<fieldset>
+	<legend>Customer Information</legend>
+		<table width="60%">
+		<tr>
+			<td>
+			First name:<br>
+			<input type="text" name="firstname" required>
+			</td>
+
+			<td>
+			Time of arrival:<br>
+			<input type="time" name="time">
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+			Last name:<br>
+			<input type="text" name="lastname">
+			</td>
+
+			<td>
+			Date of arrival:<br>
+			<input type="date" name="date">
+			</td>
+		</tr>
+		<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+		<tr padding="20px">
+			<td>
+			<input type="submit" value="Submit">
+			</td>
+
+			<td>
+			<input type="reset" value="Cancel">
+			</td>
+		</tr>
+		</table>
+	</fieldset>
+	</form>
+
+	<p>
+	<sub><b>*Note:</b> If no date entered, it is assumed you are comming today.</sub>
+	</div>
+	</section>
+	<footer>
+	<table width="100%">
+		<tr>
+			<td width="30%"><a href="#top">Top</a></td>
+			<td width="30%" align="center">Copyright &#169; 2015</td>
+			<td width="28%" align="right">Like us on</td>
+			<td width="2%" align="right"><a href="https://www.facebook.com/Coffee-Store-530679270423864/?fref=ts"><img height="30px" src="fb.png"></a></td>
+		</tr>
+	</table>
+	</footer>
+</body>
